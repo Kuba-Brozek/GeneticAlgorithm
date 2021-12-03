@@ -1,19 +1,18 @@
 package com.company;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    private static ArrayList<Integer> ChromosomeList = new ArrayList<>();
-    private static ArrayList<Integer> ChromosomeList2 = new ArrayList<>();
-    private static ArrayList<String> ChromosomeListBinar = new ArrayList<>();
-    private static ArrayList<String> ChromosomeListBinar2 = new ArrayList<>();
-    private static ArrayList<Double> PercentageValueList = new ArrayList<>();
-    private static ArrayList<Integer> ValueList = new ArrayList<>();
-    private static ArrayList<Integer> FitList = new ArrayList<>();
-    private static ArrayList<PercentageRangeClass> PercentageRangeList = new ArrayList<>();
+    private static final ArrayList<Integer> ChromosomeList = new ArrayList<>();
+    private static final ArrayList<Integer> ChromosomeList2 = new ArrayList<>();
+    private static final ArrayList<String> ChromosomeListBinar = new ArrayList<>();
+    private static final ArrayList<String> ChromosomeListBinar2 = new ArrayList<>();
+    private static final ArrayList<Double> PercentageValueList = new ArrayList<>();
+    private static final ArrayList<Integer> ValueList = new ArrayList<>();
+    private static final ArrayList<Integer> FitList = new ArrayList<>();
+    private static final ArrayList<PercentageRangeClass> PercentageRangeList = new ArrayList<>();
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -73,7 +72,7 @@ public class Main {
         int Final = 0;
         for(;;) {
             double PercentageIterationValue = 0.00;
-            double aValuePercent = 0;
+            double aValuePercent;
             int ValueOfFitFun = 0;
 
             for (int i = 0; i < ChromosomesNumber; i++) {
@@ -227,9 +226,6 @@ public class Main {
     }
 
     public static double PercentageValue(int a, int b){
-        double c = a;
-        double d = b;
-        double x = c/ d;
-        return x;
+        return (double) a / (double) b;
     }
 }
